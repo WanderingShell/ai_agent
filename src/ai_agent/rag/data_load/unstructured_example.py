@@ -7,7 +7,7 @@ from unstructured.partition.auto import partition
 
 # 使用unstructured加载并解析PDF文档
 elements = partition(
-    filename=pdf_path,
+    filename=pdf_path.as_posix(),
     content_type="application/pdf",
 )
 
