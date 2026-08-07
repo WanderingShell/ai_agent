@@ -2,10 +2,11 @@ __version__ = "0.1.0"
 __author__ = "DonLee"
 __email__ = "li.dong.7951@gmail.com"
 
-__all__ = ["PROJECT_ROOT", "DOCS_DIR",]
+__all__ = ["PROJECT_ROOT", "DOCS_DIR", "MODELS_DIR"]
 
 from .paths import PROJECT_ROOT
 from .paths import DOCS_DIR
+from .paths import MODELS_DIR
 from dotenv import load_dotenv
 
 # 加载虚拟环境变量

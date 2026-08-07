@@ -2,11 +2,11 @@ import os
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 from visual_bge.visual_bge.modeling import Visualized_BGE
 import torch
-from ai_agent import DOCS_DIR
+from ai_agent import DOCS_DIR, MODELS_DIR
 
 
 model = Visualized_BGE(model_name_bge="BAAI/bge-base-en-v1.5",
-                       model_weight="../../../models/bge/Visualized_base_en_v1.5.pth")
+                       model_weight=  MODELS_DIR / "bge" / "Visualized_base_en_v1.5.pth")
 model.eval()
 
 with torch.no_grad():
