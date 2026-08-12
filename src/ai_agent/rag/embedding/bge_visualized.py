@@ -1,6 +1,8 @@
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
-from visual_bge.visual_bge.modeling import Visualized_BGE
+from visual_bge import Visualized_BGE
 import torch
 from ai_agent import DOCS_DIR, MODELS_DIR
 

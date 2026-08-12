@@ -2,7 +2,10 @@ import os
 from tqdm import tqdm
 from glob import glob
 import torch
-from visual_bge.visual_bge.modeling import Visualized_BGE
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+from visual_bge import Visualized_BGE
 from pymilvus import MilvusClient, FieldSchema, CollectionSchema, DataType
 import numpy as np
 import cv2
